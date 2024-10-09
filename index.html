@@ -1,8 +1,129 @@
-<a href="https://www.behance.net/raheefm" target="_blank">Behance Portfolio</a>
-## About Me
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Raheef M | Multimedia Graphic Designer</title>
+    
+    <!-- Google Font - Sansita Bold -->
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #001f3f; /* Navy blue background */
+            color: #fff; /* White font */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            font-family: 'Sansita Swashed', cursive; /* Sansita Bold font */
+            font-size: 4em;
+            margin: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 0.15em solid #fff;
+            width: 0;
+            animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 9ch; } /* Adjusted to fit "Raheef M" */
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #fff; }
+        }
+        section {
+            max-width: 800px;
+            margin: 0 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: left;
+        }
+        h2 {
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        a {
+            color: #ffcc00; /* Yellow for links */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            margin-top: 20px;
+            width: 100%;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+        }
 
-Hey there! I'm Raheef, a passionate graphics designer based in Tirur, Kerala. From acing my SSLC exams to currently pursuing a Diploma in multimedia design at Vismayam College of Art & Media, my creative journey has been nothing short of exciting. I love turning ideas into visual masterpieces, and my Behance portfolio is where I showcase my best work.
+        /* Typing effect for section content */
+        .typing-content {
+            width: 0;
+            border-right: 0.15em solid #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typingContent 5s steps(50, end) forwards, blink-caret 0.75s step-end infinite;
+        }
+        @keyframes typingContent {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+    </style>
+</head>
+<body>
 
-Feel free to explore my projects below, and let's connect! 🎨✨
+    <header>
+        <h1>Raheef M</h1>
+    </header>
 
-Behance Portfolio
+    <section>
+        <h2>About Me</h2>
+        <p class="typing-content">SSLC passed year 2021-2022 from TIC Secondary School.</p>
+        <p class="typing-content">Higher Secondary passed year 2023-2024 from GHSS Niramaruthur.</p>
+        <p class="typing-content">Currently pursuing a Diploma in Multimedia Design at Vismayam College of Art & Media.</p>
+    </section>
+
+    <section class="contact-info">
+        <h2>Contact Information</h2>
+        <p class="typing-content"><strong>Location:</strong> Tirur, Kerala</p>
+        <p class="typing-content"><strong>Phone:</strong> +91 6282356956 (WhatsApp available)</p>
+        <p class="typing-content"><strong>Email:</strong> <a href="mailto:raheefm050@gmail.com">raheefm050@gmail.com</a></p>
+        <p class="typing-content"><strong>Behance:</strong> <a href="https://www.behance.net/raheefm" target="_blank">behance.net/raheefm</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Raheef M. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
