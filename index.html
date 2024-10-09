@@ -48,6 +48,7 @@
             margin-bottom: 20px;
             cursor: pointer;
         }
+
         header h1 {
             font-size: 3.5em;
             margin: 0;
@@ -55,17 +56,12 @@
             white-space: nowrap;
             border-right: 0.15em solid #fff;
             width: 0;
-            animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+            animation: typing 4s steps(40, end) forwards;
         }
 
         @keyframes typing {
             from { width: 0; }
             to { width: 12ch; }
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: #fff; }
         }
 
         section {
@@ -116,6 +112,11 @@
             width: 100%;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
         }
+
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
     </style>
 </head>
 <body>
@@ -126,18 +127,32 @@
 
     <section>
         <h2>About Me</h2>
+        <p>Hello! I’m Raheef M, a passionate multimedia designer. I specialize in creating visually captivating content, combining creativity with technical skills in graphic design, video editing, and motion graphics. I'm constantly exploring new ways to express ideas through digital media.</p>
+    </section>
+
+    <section>
+        <h2>Education</h2>
         <p>SSLC passed year 2021-2022 from TIC Secondary School.</p>
         <p>Higher Secondary passed year 2023-2024 from GHSS Niramaruthur.</p>
         <p>Currently pursuing a Diploma in Multimedia Design at Vismayam College of Art & Media.</p>
     </section>
 
+    <section>
+        <h2>Personal Details</h2>
+        <p><span class="emoji">🎂</span> Date of Birth: 13/11/2005</p>
+        <p><span class="emoji">📍</span> Location: Tirur, Kerala, Pin 676</p>
+    </section>
+
     <section class="contact-info">
         <h2>Contact Me</h2>
         <a href="https://wa.me/916282356956" target="_blank">
-            <i class="fab fa-whatsapp"></i> WhatsApp
+            <span class="emoji">📱</span> WhatsApp
         </a>
         <a href="mailto:raheefm050@gmail.com">
-            <i class="fas fa-envelope"></i> Email
+            <span class="emoji">✉️</span> Gmail
+        </a>
+        <a href="tel:+916282356956">
+            <span class="emoji">📞</span> Call
         </a>
         <a href="https://www.behance.net/raheefm" target="_blank">
             <i class="fab fa-behance"></i> Behance
@@ -160,5 +175,6 @@
 
 </body>
 </html>
+
 
 
