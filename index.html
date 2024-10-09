@@ -14,15 +14,30 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #001f3f; /* Navy blue background */
-            color: #fff; /* White font */
+            background: url('https://img.freepik.com/free-vector/halftone-background-with-circles_1017-27480.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            position: relative;
+            z-index: 1;
         }
+        
+        /* Dark navy blue overlay to enhance text readability */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 31, 63, 0.7); /* Navy blue overlay with transparency */
+            z-index: -1;
+        }
+        
         header {
             text-align: center;
             margin-bottom: 20px;
@@ -116,14 +131,4 @@
         <h2>Contact Information</h2>
         <p class="typing-content"><strong>Location:</strong> Tirur, Kerala</p>
         <p class="typing-content"><strong>Phone:</strong> +91 6282356956 (WhatsApp available)</p>
-        <p class="typing-content"><strong>Email:</strong> <a href="mailto:raheefm050@gmail.com">raheefm050@gmail.com</a></p>
-        <p class="typing-content"><strong>Behance:</strong> <a href="https://www.behance.net/raheefm" target="_blank">behance.net/raheefm</a></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Raheef M. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
-
+        <p class="typing-content"><strong>Email:</strong> <a href="mailto
