@@ -10,7 +10,6 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            /* Add gradient background here */
             background: linear-gradient(135deg, #ff7e5f, #feb47b);
             color: #333;
             min-height: 100vh;
@@ -26,8 +25,21 @@
             width: 100%;
         }
         header h1 {
-            margin: 0;
             font-size: 3em;
+            margin: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 0.15em solid #fff;
+            width: 0;
+            animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 12ch; } /* Adjust '12ch' to fit your text */
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #fff; }
         }
         header p {
             margin: 5px 0 0;
@@ -87,7 +99,6 @@
             <p><img src="your-link-to-image.jpg" alt="Social Media Campaign"></p>
             <p>Description of the project: This campaign involved creating motion graphics and video edits for ABC’s latest product launch.</p>
         </div>
-        <!-- Add more projects here -->
     </section>
 
     <section>
