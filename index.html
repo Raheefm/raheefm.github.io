@@ -6,11 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Raheef M | Multimedia Graphic Designer</title>
 
-    <!-- Google Font for a clean CV style -->
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Confetti JS -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 
     <style>
         body {
@@ -29,7 +32,6 @@
             z-index: 1;
         }
 
-        /* Dark overlay for readability */
         body::before {
             content: '';
             position: absolute;
@@ -37,14 +39,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 31, 63, 0.8); /* Navy blue overlay */
+            background: rgba(0, 31, 63, 0.8);
             z-index: -1;
         }
 
-        /* Typing effect for name */
         header {
             text-align: center;
             margin-bottom: 20px;
+            cursor: pointer;
         }
         header h1 {
             font-size: 3.5em;
@@ -58,7 +60,7 @@
 
         @keyframes typing {
             from { width: 0; }
-            to { width: 12ch; } /* Adjusted to fit your name */
+            to { width: 12ch; }
         }
 
         @keyframes blink-caret {
@@ -87,11 +89,10 @@
             margin-bottom: 10px;
         }
 
-        /* Links with icons for WhatsApp, Email, and Behance */
         .contact-info a {
             display: inline-flex;
             align-items: center;
-            color: #ffcc00; /* Yellow links */
+            color: #ffcc00;
             text-decoration: none;
             font-size: 1.2em;
             font-weight: bold;
@@ -119,7 +120,7 @@
 </head>
 <body>
 
-    <header>
+    <header onclick="triggerConfetti()">
         <h1>Raheef M</h1>
     </header>
 
@@ -132,18 +133,12 @@
 
     <section class="contact-info">
         <h2>Contact Me</h2>
-
-        <!-- WhatsApp Message Link -->
         <a href="https://wa.me/916282356956" target="_blank">
             <i class="fab fa-whatsapp"></i> WhatsApp
         </a>
-
-        <!-- Email Link -->
         <a href="mailto:raheefm050@gmail.com">
             <i class="fas fa-envelope"></i> Email
         </a>
-
-        <!-- Behance Profile Link -->
         <a href="https://www.behance.net/raheefm" target="_blank">
             <i class="fab fa-behance"></i> Behance
         </a>
@@ -153,11 +148,17 @@
         <p>&copy; 2024 Raheef M. All Rights Reserved.</p>
     </footer>
 
-    <!-- Optional Sound Effect -->
-    <audio autoplay>
-        <source src="your-sound-file.mp3" type="audio/mp3">
-    </audio>
+    <script>
+        function triggerConfetti() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+    </script>
 
 </body>
 </html>
+
 
