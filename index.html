@@ -64,6 +64,12 @@
             to { width: 12ch; }
         }
 
+        /* Disable blinking cursor after typing finishes */
+        header h1.completed::after {
+            content: '';
+            border-right: none;
+        }
+
         .profile-pic {
             width: 150px;
             height: 150px;
@@ -136,8 +142,8 @@
 </head>
 <body>
 
-    <header onclick="triggerConfetti()">
-        <h1>Raheef M</h1>
+    <header>
+        <h1 id="name">Raheef M</h1>
     </header>
 
     <!-- Profile Picture -->
@@ -201,15 +207,14 @@
         <p>&copy; 2024 Raheef M. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        function triggerConfetti() {
-            confetti({
-                particleCount: 100,
-                spread: 70,
-                origin: { y: 0.6 }
-            });
-        }
-    </script>
+    <audio id="typingSound" src="https://raw.githubusercontent.com/Raheefm/raheefm.github.io/main/typing-sound.mp3"></audio>
 
-</body>
-</html>
+    <script>
+        // Play typing sound and stop it after typing completes
+        const typingSound = document.getElementById('typingSound');
+        const nameElement = document.getElementById('name');
+
+        typingSound.play();
+
+        setTimeout(() => {
+            typingSound.pause(); // Stop the
